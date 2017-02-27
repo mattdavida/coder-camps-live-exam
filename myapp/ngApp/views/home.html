@@ -1,0 +1,12 @@
+<form ng-submit="controller.save()">
+<input ng-model="controller.movie.name" />
+<button class="btn">Create</button>
+</form>
+
+<ul>
+<li ng-repeat="movie in controller.movies">
+  {{movie.name}}
+  <a href="/edit/{{movie._id}}">Edit</a>
+  <a href="#" ng-click="controller.remove(movie._id)">Delete</a>
+</li>
+</ul>
